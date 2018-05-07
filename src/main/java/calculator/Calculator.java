@@ -48,6 +48,9 @@ public static void main(String[] args) {
 				case "divide":
 					sign = '/';
 					break;
+				case "modulo":
+					sign = '%';
+					break;
 				default:
 					break;
 				}
@@ -66,6 +69,9 @@ public static void main(String[] args) {
     				break;
     			case '/':
     				output /= Integer.parseInt(list.get(i));
+    				break;
+    			case '%':
+    				output %= Integer.parseInt(list.get(i));
     				break;
     			}
     		}
