@@ -11,27 +11,36 @@ to that number.
 Examples of the calculator lifecycle might be:
 
 Example 1
+
 Input from file
-Output
-Explanation
+
 add 2
 multiply 3
 apply 10
+
+Output
 36
+
+Explanation
 10 + 2 * 3 = 36
 
 Example 2
+
 Input from file
-Output
-Explanation
 multiply 3
 add 2
 apply 10
+
+Output
 32
+
+Explanation
 10 * 3 + 2 = 32
 
 Example 3
+
 Input from file
-Output
 apply 1
+
+Output
 1
