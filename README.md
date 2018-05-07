@@ -7,7 +7,9 @@ of Instructions can be specified. Instructions can be any binary operators of yo
 precedence. The last instruction should be “apply” and a number (e.g., “apply 3”). The
 calculator is then initialised with that number and the previous instructions are applied
 to that number.
+
 Examples of the calculator lifecycle might be:
+
 Example 1
 Input from file
 Output
@@ -17,6 +19,7 @@ multiply 3
 apply 10
 36
 10 + 2 * 3 = 36
+
 Example 2
 Input from file
 Output
@@ -26,6 +29,7 @@ add 2
 apply 10
 32
 10 * 3 + 2 = 32
+
 Example 3
 Input from file
 Output
