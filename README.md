@@ -10,36 +10,36 @@ to that number.
 
 Examples of the calculator lifecycle might be:
 
-Example 1
+# Example 1
 
-Input from file
-                  add 2
-                  multiply 3
-                  apply 10
+# Input from file
+add 2
+multiply 3
+apply 10
 
-Output
-                  36
+# Output
+36
 
-Explanation
-                  10 + 2 * 3 = 36
+# Explanation
+10 + 2 * 3 = 36
 
-Example 2
+# Example 2
 
-Input from file
-                  multiply 3
-                  add 2
-                  apply 10
+# Input from file
+multiply 3
+add 2
+apply 10
 
-Output
-                  32
+# Output
+32
 
-Explanation
-                  10 * 3 + 2 = 32
+# Explanation
+10 * 3 + 2 = 32
 
-Example 3
+# Example 3
 
-Input from file
-                  apply 1
+# Input from file
+apply 1
 
-Output
-                  1
+# Output
+1
