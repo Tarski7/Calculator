@@ -14,7 +14,9 @@ Examples of the calculator lifecycle might be:
 
 # Input from file
 add 2
+
 multiply 3
+
 apply 10
 
 # Output
@@ -27,7 +29,9 @@ apply 10
 
 # Input from file
 multiply 3
+
 add 2
+
 apply 10
 
 # Output
