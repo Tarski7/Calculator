@@ -8,27 +8,39 @@ import java.util.StringTokenizer;
 
 public class Calculator {
 
-public static void main(String[] args) {
+	//Method returns the ArrayList of String tokens from the file
+	public static ArrayList<String> getList() {
 		
-    	File file = new File("calculator.txt");
+		File file = new File("/home/tarski/STSworkspace/Calculator/src/main/java/calculator/calculator.txt");
     	ArrayList<String> list = new ArrayList<>();
     	
     	try {
-    	Scanner scan = new Scanner(file);
+    		Scanner scan = new Scanner(file);
     	
-    	while (scan.hasNextLine()) {
+    		while (scan.hasNextLine()) {
     		
-    		String text = scan.nextLine();
-    		StringTokenizer stringTokenizer = new StringTokenizer(text, " ");
+    			String text = scan.nextLine();
+    			StringTokenizer stringTokenizer = new StringTokenizer(text, " ");
     		
-    		while (stringTokenizer.hasMoreTokens()) {
-    			String token = stringTokenizer.nextToken();
-    			list.add(token);
+    			while (stringTokenizer.hasMoreTokens()) {
+    				String token = stringTokenizer.nextToken();
+    				list.add(token);
+    			}
     		}
-    	}
     	scan.close();
     	
-    	int output = Integer.parseInt(list.get(list.size()-1));
+    	} catch (FileNotFoundException e) {
+    		System.out.println("Cannot find a file!");
+    	}
+    	
+    	return list;
+	}
+	
+	//Method returns the output - score of mathematical operations 
+	public static int getOutput(ArrayList<String> list) {
+		
+		//get the last element from ArrayList. It's number after "apply" word
+		int output = Integer.parseInt(list.get(list.size()-1));
     	char sign = ' ';
     	
     	for (int i = 0; i < list.size()-2; i++) {
@@ -77,10 +89,13 @@ public static void main(String[] args) {
     		}
     	}
     	
-    	System.out.println(output);
-    	
-    	} catch (FileNotFoundException e) {
-    		System.out.println("Cannot find a file!");
-    	}
+    	return output;
+	}
+	
+	public static void main(String[] args) {
+		
+		ArrayList<String> list = getList();
+		int output = getOutput(list);
+		System.out.println("Output: " + output);
     }
 }
